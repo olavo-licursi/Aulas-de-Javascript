@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Onde vc nasceu? <input type="text" name="txtnome" id="txtnome">
+    <input type="button" value="GO" onclick="ver()">
+    <div id="res"></div>
+
+    <script>
+        function ver(){
+            var txtn = window.document.getElementById('txtnome')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Vivendo em ${txtn}</p>`
+            if(txtn == "Brasil"){
+                res.innerHTML += `<p>Vc é brasileiro(a)</p>`
+            }else{
+                res.innerHTML += `<p>Vc é estrangeiro(a)</P>`
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
